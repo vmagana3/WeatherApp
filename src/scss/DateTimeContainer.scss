@@ -1,0 +1,41 @@
+.DateTimeContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+
+    div{
+        margin-bottom: 5%;
+    }
+
+    .Time{
+        font-size: 4rem;
+    }
+
+    .Date{
+        font-size: 2rem;
+    }
+
+    .Location{
+        font-size: 1.5rem;
+        margin-top: 2%;
+        font-weight: 600;
+    }
+
+    button{
+        width: 5%;
+        border: none;
+        text-decoration: none;
+        background-color: transparent;
+        .icon{
+            color: white;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,31 @@
+.currentTime{
+    width: 50%;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .current{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .items{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;                 
+        }
+    }
+
+    .description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
