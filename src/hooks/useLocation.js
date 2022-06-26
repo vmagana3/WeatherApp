@@ -1,7 +1,7 @@
 export default function useLocation(){
 
     let parameters = {
-        endpoint: 'http://api.openweathermap.org/geo/1.0/reverse',
+        endpoint: 'https://api.openweathermap.org/geo/1.0/reverse',
         apiKey:'25c7742588642bad2f722d4d2aa1221a',
         limit: 1,
     }
