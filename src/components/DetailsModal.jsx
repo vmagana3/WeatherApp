@@ -5,7 +5,6 @@ export default function DetailsContainer({current, close:_close}){
     const weekDay = current.weekDay;
     const {weather} = current;
     const replace = `at ${moment().format('h:mm a').toUpperCase()}`;
-    console.log(weather); 
 
     return(
         <div className="modal d-block" id="exampleModalCenter" tabIndex="-1">
@@ -20,7 +19,7 @@ export default function DetailsContainer({current, close:_close}){
                 <div className="modal-body text-dark">
                     <div className="d-flex justify-content-around align-items-center">   
                         <div className="d-flex justify-content-center align-items-center">
-                            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/>                        
+                            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="WeatherIcon"/>                        
                             <div>
                                 <h3>{weather.weather[0].main}</h3>
                                 <h5>{weather.weather[0].description}</h5>
@@ -46,7 +45,7 @@ export default function DetailsContainer({current, close:_close}){
                                 <span>{weather.temp.day} °C</span>
                             </div>
                             <div  className="d-flex flex-column justify-content-center align-items-center">
-                                <WiSunrise size={30}/>
+                                <WiSunset size={30}/>
                                 <small>Evening</small>
                                 <span>{weather.temp.eve} °C</span>
                             </div>

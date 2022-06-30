@@ -29,3 +29,17 @@
         align-items: center;
     }
 }
+
+@media (max-width: 360px) {
+    .currentTime{
+        width: 100%;
+        .current{
+            width: 100%;
+            flex-direction: column;            
+        }
+        .items{
+            width: 100%;            
+        }
+    }
+  }
+

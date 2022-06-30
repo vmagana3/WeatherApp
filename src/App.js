@@ -37,11 +37,8 @@ const App = () => {
   const getCoords = ()=>{
     let geolocation = hookGps.getLocation();
     geolocation.getCurrentPosition((data)=>{
-      if(data.coords){   
-        /* -33.961120, 25.603128 */  
-        /* 63.463130, -162.127438 */   
-        getCityAndWeather(data.coords.latitude, data.coords.longitude);
-        //getCityAndWeather(63.463130, -162.127438);
+      if(data.coords){    
+        getCityAndWeather(data.coords.latitude, data.coords.longitude);        
       }
     });
   };
@@ -71,13 +68,14 @@ const App = () => {
     <MainContext.Provider value={{...state, set:setState}}>
       {state.ready ? (
         <div className='App'>
-        <MainContainer></MainContainer>
-        <DetailsContainer></DetailsContainer>
-      </div>
+          <MainContainer></MainContainer>
+          <DetailsContainer></DetailsContainer>
+        </div>
       ): (
         <div className='mainLoader'>
           <img src="http://openweathermap.org/img/wn/02d@4x.png"></img>             
-          <h4>Loading Weather . . .</h4>
+          <h4>Loading Weather</h4>
+          <div className='spinner'></div>
         </div>
       )}
     </MainContext.Provider>    

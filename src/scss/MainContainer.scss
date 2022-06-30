@@ -3,3 +3,11 @@
     height: 50%;
     display: flex;
 }
+
+@media (max-width: 360px) {
+    .MainContainer{
+        height: auto;
+        display: flex;
+        flex-direction: column;            
+    }
+  }
